@@ -19,10 +19,9 @@
   border-radius: 20px; /* มุมกลม */
   padding: 10px; /* เว้นระยะด้านใน */
   margin: 20px auto; /* จัดกึ่งกลางในแนวนอน */
-  width: 500px; /* ความกว้างเริ่มต้น */
-  height: 120px; /* ความสูงเริ่มต้น */
+
   width: 80%; /* ความกว้างเริ่มต้น */
-  height: 20%; /* ความสูงเริ่มต้น */
+  height: 28%; /* ความสูงเริ่มต้น */
   text-align: center; /* จัดข้อความกลาง */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* เงา */
   position: absolute; /* ใช้ position absolute เพื่อให้สามารถจัดกลางได้ */
@@ -34,41 +33,42 @@
 
 p {
   font-size: clamp(1.5rem, 2vw + 0.3rem, 3rem); /* ขนาดเล็กสุด 1.2rem, ใหญ่สุด 1.8rem */
-  margin: 10px;
+  margin: 5px;
   font-weight: bolder;
   text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
 }
 
 p.title-winner {
-  font-size: clamp(2rem, 10vw, 3rem);
+  font-size: clamp(2rem, 10vh, 3rem);
   margin: 0;
-  color: #fff;
-  -webkit-text-stroke: 1px #f1d93d; /* ขอบสีทอง */
-  text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.3); /* เพิ่มเงา */
+  color: #f1d93d;
+  /* text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.3); เพิ่มเงา */
   line-height: 1.2;
   font-weight: 600;
+  margin : 10px
 }
 
 .btnSpin {
   padding: 10px 20px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
   background-color: #ff5733;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: absolute;
   top: calc(50% + 180px); /* ปรับให้อยู่ใต้ .winner-textbox โดยใช้ค่า 80px */
   left: 50%;
   transform: translate(-50%, 0); /* จัดตำแหน่งกลางในแนวนอน */
+  width: 400px;
+  height: 100px;
 }
 
 .btnSpin:hover {
   background-color: #e74c3c; /* เปลี่ยนสีเมื่อ hover */
 }
-
 
 /* Sidebar container */
 .sidebar {
@@ -152,5 +152,3 @@ font-size: 1.5rem; /* Size of the arrow icon */
 .upload-btn:hover {
   background-color: #87ceeb; /* Slightly darker light blue on hover */
 }
-
-
