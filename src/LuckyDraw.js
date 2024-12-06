@@ -19,7 +19,8 @@ const LuckyDraw = () => {
     const fetchEmployees = async () => {
       console.log('Initialization Apps');
       try {
-        const api = process.env.REACT_APP_API+'/api/v1/getEmployee'
+        // const api = process.env.REACT_APP_API+'/api/v1/getEmployee'
+        const api = "http://localhost:3000/api/v1/getEmployee"
         const response = await fetch(api,{
           method : 'POST',
           headers: {'Content-Type': 'application/json' }
@@ -55,9 +56,9 @@ const LuckyDraw = () => {
   }, [isRotating]);
 
 
-  const updateEmployeeID = async(emp_id) =>{
+  const updateEmployeeID = async(emailAddress) =>{
     const api = process.env.REACT_APP_API+'/api/v1/drawEvent'
-    const requestData = { employeeID: emp_id };
+    const requestData = { email: emailAddress };
     const response = await fetch(api,{
       method : 'POST',
       headers: {'Content-Type': 'application/json' },
@@ -84,7 +85,7 @@ const LuckyDraw = () => {
       const rowData = listData[randomIndex]
       console.log(rowData)
       // Map Data from json
-      const {"department": personal_area,"id":emp_id,"name": fullname} = rowData;
+      const {"department": personal_area,"email": emailAddress ,"name": fullname} = rowData;
       const winnerName = fullname ;
 
       setListData(prevData => prevData.filter((_, index) => index !== randomIndex));
@@ -96,7 +97,7 @@ const LuckyDraw = () => {
         setDept(personal_area)
       }, 4000);
       // show Department after spinner
-      updateEmployeeID(emp_id)
+      updateEmployeeID(emailAddress)
     }else{
       setDisplayText(" Please Check Database!")
     }
