@@ -19,8 +19,8 @@ const LuckyDraw = () => {
     const fetchEmployees = async () => {
       console.log('Initialization Apps');
       try {
-        // const api = process.env.REACT_APP_API+'/api/v1/getEmployee'
-        const api = "http://localhost:3000/api/v1/getEmployee"
+        const api = process.env.REACT_APP_API+'/api/v1/getEmployee'
+
         const response = await fetch(api,{
           method : 'POST',
           headers: {'Content-Type': 'application/json' }
