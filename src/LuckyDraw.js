@@ -183,7 +183,7 @@ const LuckyDraw = () => {
         <div className="winner-textbox">
           <p className="title-winner">Winner</p>
           <p>{displayText}</p>
-          <p>{dept}</p>
+          <p className ="department">{dept}</p>
         </div>
         <button onClick={startSpin} className="btnSpin">Draw</button>
       </div>
