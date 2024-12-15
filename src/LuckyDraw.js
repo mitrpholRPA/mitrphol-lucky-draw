@@ -94,7 +94,7 @@ const LuckyDraw = () => {
         setShowConfetti(true);
         setIsRotating(true);
         setDept(personal_area)
-      }, 4000);
+      }, 2000);
       // show Department after spinner
       updateEmployeeID(emailAddress)
     }else{
